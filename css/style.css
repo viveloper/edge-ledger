@@ -1,54 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 :root {
-  --mainGreen: #7fb800;
+  --mainGreen: #93cb52;
+  --mainTransition: all 0.3s ease;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* utility classes */
+.text-primary {
+  color: var(--mainGreen);
 }
 
 /* navbar */
-.navbar {
+#navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* position: fixed; */
-}
-
-.logo {
-  color: var(--mainGreen);
-  font-size: 1.5rem;
-  font-weight: bolder;
-}
-
-.logo-subtitle {
+  background: #333;
+  padding: 1rem;
   color: #fff;
+  /* position: fixed;
+  width: 100%; */
+  position: sticky;
+  top: 0;
+  /* z-index: 1; */
 }
 
-.nav-list {
-  list-style-type: none;
-  color: #fff;
+#navbar ul {
+  list-style: none;
   display: flex;
+  align-items: center;
 }
 
-.nav-item {
+#navbar ul li a {
   text-transform: capitalize;
-  margin: 0 2rem 0 0;
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+  transition: var(--mainTransition);
+}
+
+#navbar ul li a:hover {
+  background-color: var(--mainGreen);
+  border-radius: 5px;
 }
 
 /* showcase */
 .showcase {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../img/showcase.jpg') center/cover no-repeat;
-  min-height: 150vh;
+  min-height: 100vh;
 }
