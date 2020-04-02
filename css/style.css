@@ -46,6 +46,10 @@ p {
   background: #333;
   color: #fff;
 }
+.bg-primary {
+  background: var(--mainGreen);
+  color: #fff;
+}
 .l-heading {
   text-transform: capitalize;
   font-size: 4rem;
@@ -89,6 +93,7 @@ p {
   border-radius: 5px;
   text-transform: capitalize;
   transition: var(--mainTransition);
+  cursor: pointer;
 }
 .btn:hover {
   background-color: var(--darkGreen);
@@ -111,7 +116,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  min-height: 4rem;
   background: #333;
   padding: 1rem;
   color: #fff;
@@ -194,4 +199,33 @@ p {
   display: block;
   width: 12%;
   margin: auto;
+}
+/* contact */
+#contact {
+  display: flex;
+}
+#contact .contact-form,
+#contact .map {
+  flex: 1;
+}
+#contact .contact-form .form-group {
+  margin: 0.75rem 0;
+}
+#contact .contact-form label {
+  display: block;
+}
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+}
+#contact .map {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .map span {
+  font-size: 1rem;
 }
